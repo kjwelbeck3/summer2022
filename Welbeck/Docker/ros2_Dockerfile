@@ -30,7 +30,7 @@ RUN echo "source $ROS_ROOT/setup.bash" >> ~/.bashrc
 # creating, downloading example packages and sourcing an overlay
 RUN mkdir -p $ROS_WS/src/examples
 WORKDIR $ROS_WS
-COPY examples_ros2 src/examples
+COPY rclpy src/examples
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-colcon-common-extensions \
     build-essential \
